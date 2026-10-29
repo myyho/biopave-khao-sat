@@ -24,7 +24,18 @@ pnpm run build
 pnpm run dev
 ```
 
-Mở URL Local được in ra (mặc định `http://127.0.0.1:5173/`). Form cần kết nối mạng để gửi phản hồi tới Google.
+Mở URL Local được in ra (mặc định `http://localhost:3000/`). Form cần kết nối mạng để gửi phản hồi tới Google.
+
+## Deploy trên Render
+
+Tạo **Web Service** với runtime Node.js để API `/api/survey` hoạt động. Cấu hình:
+
+- Root Directory: để trống (gốc repository, nơi có `package.json`).
+- Build Command: `pnpm install --frozen-lockfile && pnpm run build`
+- Start Command: `pnpm start`
+- Node.js: phiên bản 22.13 trở lên.
+
+Không dùng Static Site hoặc đặt Publish Directory: trang cần máy chủ Next.js để gửi phản hồi khảo sát. Bản Render dùng Next.js trực tiếp, nên build không cần `.openai/hosting.json` hay cấu hình Vinext/Cloudflare.
 
 ## Cấu trúc chính
 
