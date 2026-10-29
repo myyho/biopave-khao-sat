@@ -31,7 +31,7 @@ Mở URL Local được in ra (mặc định `http://localhost:3000/`). Form c�
 Tạo **Web Service** với runtime Node.js để API `/api/survey` hoạt động. Cấu hình:
 
 - Root Directory: để trống (gốc repository, nơi có `package.json`).
-- Build Command: `pnpm install --frozen-lockfile && pnpm run build`
+-Start Command: `node node_modules/next/dist/bin/next start -H 0.0.0.0 -p $PORT`
 - Start Command: `pnpm start`
 - Node.js: phiên bản 22.13 trở lên.
 
