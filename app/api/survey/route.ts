@@ -11,7 +11,7 @@ import {
 } from "@/lib/survey-form";
 import { z } from "zod";
 
-export const runtime = "edge";
+export const runtime = "nodejs";
 
 const otherText = z.string().trim().max(2000);
 const inputSchema = z.object({
