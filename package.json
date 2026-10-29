@@ -10,7 +10,7 @@
     "install:ci": "node scripts/install-ci.mjs",
     "dev": "next dev",
     "build": "next build --webpack",
-    "start": "next start -H 0.0.0.0",
+ "start": "node node_modules/next/dist/bin/next start -H 0.0.0.0",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate"
   },
